@@ -4,27 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Sora&display=swap" rel="stylesheet">
+
     <title>Drink-Tracker</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
-<body>
-    <h1>Drink Tracker</h1>
+<body class="font">
+    <h1 class="text-center">Drink Tracker</h1>
 
-    <section>
-        <h2>
+    <section class="center">
+        <h2 class="text-center">
             Welcome to Drink Tracker 
         </h2>
-        <form action="home.html" method="post">
+
+        <div class="text-center">
+            <img src="img/drinking.jpg" height="300px" width="300px">
+        </div>
+
+        <div class="text-center">
             <p>Apakah kamu sudah dewasa atau masih anak-anak?</p>
-            <input type="radio" id="dewasa" name="umur" value="dewasa">
-            <label for="umur">Dewasa</label>
+        </div>
 
-            <input type="radio" id="anak-anak" name="umur" value="anak-anak">
-            <label for="umur">Anak-anak</label>
-
-            <input type="submit">
+        <form class="text-center" action="home.html" method="post">
+            <input type="button" id="dewasa" name="umur" value="Dewasa">
+            <input type="button" id="anak-anak" name="umur" value="Anak-anak">
         </form>
     </section>
+    
+    <script src="index.js"></script>
 </body>
 </html>

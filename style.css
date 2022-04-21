@@ -49,3 +49,18 @@ li:hover {
 }
 
 /* End Yoga */
+
+
+/* banu nambahin */
+
+.center {
+    margin: auto;
+    width: 75%;
+    border: 3px solid grey;
+    padding: 10px
+}
+
+body {
+    font-family: 'Fredoka One', cursive;
+    font-family: 'Sora', sans-serif;
+}
