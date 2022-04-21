@@ -1,0 +1,51 @@
+
+
+/* Yoga Add */
+.box-container {
+    background-color: #d4d7dfb8;
+    width: 900px;
+    margin: 30px auto;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.box-target {
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.text-center {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+li {
+    text-decoration: none;
+    float: left;
+}
+
+li:hover {
+    background-color: #111111;
+}
+
+.input-air {
+    background-color: lightgrey;
+    width: 150px;
+    border: 1px solid gray;
+    padding: 10px;
+    margin: 10px;
+}
+
+.input-air .row{
+    margin-top: 10px;
+}
+
+/* End Yoga */
