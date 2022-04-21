@@ -17,11 +17,11 @@
                 <div class="row">
                     <div class="col">
                         <h5>Kebutuhan minum hari ini</h5>
-                        <h3 id="targetMinum" class="box-target">0 <span>ml</span></h3>
+                        <h3 id="targetMinum" class="box-target">0</h3>
                     </div>
                     <div class="col">
                         <h5>Progres minum hari ini</h5>
-                        <h3 id="progressMinum" class="box-target">0 <span>ml</span></h3>
+                        <h3 id="progressMinum" class="box-target">0 ml</h3>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
             <h6 class="text-start gray-800"><em>1 gelas (250 ml)</em></h6>
                 <ul>
                     <li>
-                        <div class="input-air" id="input1">
+                        <div class="input-air" id="input1" onclick="tambahMinum250()">
                             <div class="row">
                                 <img src="img/water-glass.png" alt="gambar gelas">
                             </div>
@@ -47,7 +47,7 @@
                     </li>
 
                     <li>
-                        <div class="input-air">
+                        <div class="input-air" onclick="tambahMinum500()">
                             <div class="row">
                                 <img src="img/water-glass.png" alt="gambar gelas">
                             </div>
@@ -58,7 +58,7 @@
                     </li>
 
                     <li>
-                        <div class="input-air">
+                        <div class="input-air" onclick="tambahMinum1000()">
                             <div class="row">
                                 <img src="img/water-glass.png" alt="gambar gelas">
                             </div>
@@ -77,6 +77,12 @@
             <h3 class="text-start">Riwayat Minum Hari Ini</h1>
             <br>
             <ul id="list"></ul>
+            <table id="historyTable" class="table table-primary table-striped">
+                <tr>
+                    <th>Kuantitas Air Diminum</th>
+                    <th>Aksi</th>
+                </tr>
+            </table>
         </div>
     </section>
     <script src="index.js"></script>
