@@ -66,3 +66,41 @@ console.log(kurangHariIni(totalAirPerHari, outputHistoryCoba))
 
 // let outputKurangMinumHariIni = kurangHariIni(totalAirPerHari, outputArrHistoryMinum) /// ini untuk OUTPUT kekurangan air hari ini !!!!
 
+function tambah(angka){
+    let progressMinum = document.getElementById("progressMinum");
+  
+    progressMinum.innerHTML = Number(progressMinum.innerHTML) + angka;
+  
+    let historyTable = document.getElementById("historyTable");
+    let newRowMinum = document.createElement("tr");
+    let airDiminum = document.createElement("td");
+    airDiminum.innerHTML = angka;
+
+    let newButton = document.createElement("button");
+    newButton.innerHTML = "Delete";
+    newButton.type = "submit";
+    newButton.onclick = function () {
+        let progressMinum = document.getElementById("progressMinum");
+        progressMinum.innerHTML = Number(progressMinum.innerHTML) - angka;
+        newRowMinum.remove();
+    };
+
+    let tdButton = document.createElement("td");
+    tdButton.append(newButton);
+
+    newRowMinum.append(airDiminum, tdButton);
+
+    historyTable.append(newRowMinum);
+}
+
+function tambahMinum250() {
+    tambah(250)
+}
+
+function tambahMinum500() {
+    tambah(500)
+}
+
+function tambahMinum1000() {
+    tambah(1000)
+}
