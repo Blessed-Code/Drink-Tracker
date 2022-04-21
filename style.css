@@ -64,10 +64,19 @@ li:hover {
     margin: auto;
     width: 75%;
     border: 3px solid grey;
-    padding: 10px
+    border-radius: 10px;
+    padding: 20px
 }
 
 body {
     font-family: 'Fredoka One', cursive;
     font-family: 'Sora', sans-serif;
+}
+
+.container-index {
+    background-color: white;
+    width: 900px;
+    margin: 30px auto;
+    padding: 40px;
+    border-radius: 10px;
 }
