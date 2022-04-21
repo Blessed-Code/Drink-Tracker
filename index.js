@@ -20,18 +20,21 @@ let totalAirPerHari = totalPerhari(inputUsia) /// ini untuk OUTPUT kebutuhan tot
 //============================================
 
 
-let inputMinum = ["11.00", 1000]  // ini INPUT untuk minum ditambakah ke array !! INPUT minum = [jam, jumlah minum mililiter] !!!!
+let inputMinum = {jam:"11.00",minum: 1000}  // ini INPUT untuk minum ditambakah ke array !! INPUT minum = [jam, jumlah minum mililiter] !!!!
 // [ ["11.00", 1000],  ["13.00", 900], ["15.00", 900]]
 
-function historyMinum(arr){
+function historyMinum(obj){
     let result = []
 
-    result.push(arr)
+    result.push(obj)
     return result
 }
 
 // console.log(historyMinum(inputMinum))
 let outputArrHistoryMinum = historyMinum(inputMinum) // ini untuk OUTPUT history minum !!!!
+
+// {jam: 11:00
+//air: 1000}
 
 
 // bisa 2 pilihan output
@@ -47,7 +50,7 @@ function kurangHariIni(kebutuhan, arrHistory){
     let airHariIni = 0
 
     for(let i=0;i<arrHistory.length;i++){
-        airHariIni += arrHistory[i][1]
+        airHariIni += arrHistory[i].minum
         
     }
 
@@ -56,10 +59,10 @@ function kurangHariIni(kebutuhan, arrHistory){
 
 }
 
-// let outputHistoryCoba = [["11.00", 1000],["13.00", 900],["16.00", 2000],["19.00", 1500]]
+let outputHistoryCoba = [{ jam: '13.00', minum: 900 }, { jam: '15.00', minum: 800 },{ jam: '17.00', minum: 1200 }]
 
-// console.log(kurangHariIni(totalAirPerHari, outputHistoryCoba))
+console.log(kurangHariIni(totalAirPerHari, outputHistoryCoba))
 // console.log(kurangHariIni(totalAirPerHari, outputArrHistoryMinum))
 
-let outputKurangMinumHariIni = kurangHariIni(totalAirPerHari, outputArrHistoryMinum) /// ini untuk OUTPUT kekurangan air hari ini !!!!
+// let outputKurangMinumHariIni = kurangHariIni(totalAirPerHari, outputArrHistoryMinum) /// ini untuk OUTPUT kekurangan air hari ini !!!!
 
