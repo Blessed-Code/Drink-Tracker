@@ -77,6 +77,13 @@ function tambah(angka){
     
     const arrProgress = progressMinum.innerHTML.split(" ");
 
+    let targetMinum = document.getElementById("targetMinum")
+    const arrTarget = targetMinum.innerHTML.split(" ");
+    // console.log(Number(arrProgress[0]), Number(arrTarget[0]))
+    if ((Number(arrProgress[0])+angka) >= Number(arrTarget[0])){
+      alert('Kamu sudah mencapai target minum hari ini !!')
+    }
+
     progressMinum.innerHTML = (Number(arrProgress[0]) + angka) + " ml";
   
     let historyTable = document.getElementById("historyTable");
