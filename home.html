@@ -93,11 +93,19 @@
                 
                 <div class="container">
                     <div class="row">
-                        <div class="col">
+                        <div class="col d-flex align-items-center">
                             <input type="number" class="input" id="inputManual" aria-describedby="emailHelp"
                                 placeholder="Jumlah Minum Dalam ml">
-                            <a type="button" onclick="tambahMinumManual()" class="btn btn-outline-primary"
-                                data-toggle="modal">Input Minum<a>
+                            <button 
+                                type="button" 
+                                onclick="tambahMinumManual()" 
+                                class="btn btn-outline-primary"
+                                data-toggle="modal"
+                                style="height: 44px;"
+
+                            >
+                                Input Minum
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -112,16 +120,22 @@
             <h3 class="text-start">Riwayat Minum Hari Ini</h1>
                 <br>
                 <ul id="list"></ul>
-                <table id="historyTable" class="table table-primary table-striped">
-                    <tr>
-                        <th>Kuantitas Air Diminum <em>(ml)</em></th>
-                        <th>Jam Input</th>
-                        <th>Aksi</th>
-                    </tr>
+                <table id="historyTable" class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Kuantitas Air Diminum <em>(ml)</em></th>
+                            <th>Jam Input</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyHistoryTable">
+
+                    </tbody>
                 </table>
         </div>
     </section>
     <script src="index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>

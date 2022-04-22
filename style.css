@@ -45,18 +45,20 @@ ul {
 
 li {
     text-decoration: none;
+    border-radius: 10px;
 }
 
 li:hover {
-  background-color: #0583d2;
+    background-color: #b3b9de;
 }
 
 .input-air {
-  background-color: white;
-  width: 150px;
-  border: 1px solid gray;
-  padding: 10px;
-  margin: 10px;
+    background-color: white;
+    width: 150px;
+    border: 1px solid #b3b9de;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;;
 }
 
 .input-air .row {

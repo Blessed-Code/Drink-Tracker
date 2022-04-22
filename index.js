@@ -81,12 +81,12 @@ function tambah(angka){
     const arrTarget = targetMinum.innerHTML.split(" ");
     // console.log(Number(arrProgress[0]), Number(arrTarget[0]))
     if ((Number(arrProgress[0])+angka) >= Number(arrTarget[0])){
-      alert('Kamu sudah mencapai target minum hari ini !!')
+      swal('Kamu sudah mencapai target minum hari ini !!');
     }
 
     progressMinum.innerHTML = (Number(arrProgress[0]) + angka) + " ml";
   
-    let historyTable = document.getElementById("historyTable");
+    let historyTable = document.getElementById("bodyHistoryTable");
     let newRowMinum = document.createElement("tr");
     let airDiminum = document.createElement("td");
     airDiminum.innerHTML = angka;
@@ -98,6 +98,7 @@ function tambah(angka){
     let newButton = document.createElement("button");
     newButton.innerHTML = "Delete";
     newButton.type = "submit";
+    newButton.className = "btn btn-danger"
     newButton.onclick = function () {
         let progressMinum = document.getElementById("progressMinum");
         const arrProgress = progressMinum.innerHTML.split(" ");
@@ -107,7 +108,6 @@ function tambah(angka){
 
     let tdButton = document.createElement("td");
     tdButton.append(newButton);
-
     newRowMinum.append(airDiminum, jamInput, tdButton);
 
     historyTable.append(newRowMinum);
