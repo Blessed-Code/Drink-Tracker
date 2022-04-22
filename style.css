@@ -1,81 +1,87 @@
-
-
 /* Yoga Add */
 .box-container {
-    background-color: white;
-    width: 900px;
-    margin: 30px auto;
-    padding: 40px;
-    border-radius: 10px;
+  background-color: white;
+  width: 900px;
+  margin: 30px auto;
+  padding: 40px;
+  border-radius: 10px;
 }
 
 .box-target {
-    margin: 10px auto;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid black;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 ul {
-    /* list-style-type: none;
+  /* list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden; */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    list-style-type: none;
-    justify-content: space-around;
-  }
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: space-around;
+}
 
 li {
     text-decoration: none;
 }
 
 li:hover {
-    background-color: #0583d2;
+  background-color: #0583d2;
 }
 
 .input-air {
-    background-color: white;
-    width: 150px;
-    border: 1px solid gray;
-    padding: 10px;
-    margin: 10px;
+  background-color: white;
+  width: 150px;
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 10px;
 }
 
-.input-air .row{
-    margin-top: 10px;
+.input-air .row {
+  margin-top: 10px;
 }
 
 /* End Yoga */
 
-
 /* banu nambahin */
 
 .center {
-    margin: auto;
-    width: 75%;
-    border: 3px solid grey;
-    border-radius: 10px;
-    padding: 20px
+  margin: auto;
+  width: 75%;
+  border: 3px solid grey;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 body {
-    font-family: 'Fredoka One', cursive;
-    font-family: 'Sora', sans-serif;
+  font-family: "Fredoka One", cursive;
+  font-family: "Sora", sans-serif;
 }
 
 .container-index {
-    background-color: white;
-    width: 900px;
-    margin: 30px auto;
-    padding: 40px;
-    border-radius: 10px;
+  background-color: white;
+  width: 900px;
+  margin: 30px auto;
+  padding: 40px;
+  border-radius: 10px;
 }
+
+.input {
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 5px;
+  height: 5px;
+  width: 670px;
+}
+
