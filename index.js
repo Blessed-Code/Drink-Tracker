@@ -114,6 +114,12 @@ function tambahMinum1000() {
     tambah(1000)
 }
 
+function tambahMinumManual() {
+  let value = Math.abs(Number(document.getElementById("inputManual").value)); 
+  
+  tambah(value)
+}
+
 function showGantiTarget() {
   var gntiTrgtDiv = document.getElementById("iptGantiTrgtDiv");
   if (gntiTrgtDiv.style.display === "none") {
