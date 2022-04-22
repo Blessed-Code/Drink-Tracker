@@ -14,8 +14,8 @@
 <body style="background-color: #0583d2;">
     <section>
         <div class="box-container text-center">
-            <h1 ><strong> DRINK TRACKER</strong></h1>
-            <br>
+        <h1><strong> DRINK TRACKER</strong></h1>
+        <br>
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -28,7 +28,16 @@
                     </div>
                 </div>
             </div>
-            <!-- <input type="button" onclick="" value="Sudah minum" class="btn btn-success"> -->
+
+            <br>
+            <button onclick="showGantiTarget()" class="btn btn-outline-secondary">Ganti Target</button>
+            <br>
+            <br>
+            <div id="iptGantiTrgtDiv" style="display: none;">
+                <input id="iptGantiTrgt" type="number" class="form-control" placeholder="Input Target" aria-label="Recipient's username" aria-describedby="button-addon2" min="0">
+                <br>
+                <button onclick="updateTarget()" class="btn btn-success" type="button" id="button-addon2">Update</button>
+            </div>
         </div>
     </section>
 

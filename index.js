@@ -113,3 +113,27 @@ function tambahMinum500() {
 function tambahMinum1000() {
     tambah(1000)
 }
+
+function showGantiTarget() {
+  var gntiTrgtDiv = document.getElementById("iptGantiTrgtDiv");
+  if (gntiTrgtDiv.style.display === "none") {
+    let targetMinum = document.getElementById("targetMinum");
+    const arrTargetMinum = targetMinum.innerHTML.split(" ");
+    let inputGantiTarget = document.getElementById("iptGantiTrgt");
+    inputGantiTarget.value = Number(arrTargetMinum[0])
+    gntiTrgtDiv.style.display = "block";
+  } else {
+    gntiTrgtDiv.style.display = "none";
+  }
+}
+
+function updateTarget(){
+  let targetMinum = document.getElementById("targetMinum");
+  let inputGantiTarget = document.getElementById("iptGantiTrgt");
+  var gntiTrgtDiv = document.getElementById("iptGantiTrgtDiv");
+  if (!inputGantiTarget.value) {
+    inputGantiTarget.value = 0
+  }
+  targetMinum.innerHTML = inputGantiTarget.value.toString() + " ml"
+  gntiTrgtDiv.style.display = "none";
+}
