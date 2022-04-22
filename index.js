@@ -77,12 +77,23 @@ function tambah(angka){
     
     const arrProgress = progressMinum.innerHTML.split(" ");
 
+    let targetMinum = document.getElementById("targetMinum")
+    const arrTarget = targetMinum.innerHTML.split(" ");
+    // console.log(Number(arrProgress[0]), Number(arrTarget[0]))
+    if ((Number(arrProgress[0])+angka) >= Number(arrTarget[0])){
+      alert('Kamu sudah mencapai target minum hari ini !!')
+    }
+
     progressMinum.innerHTML = (Number(arrProgress[0]) + angka) + " ml";
   
     let historyTable = document.getElementById("historyTable");
     let newRowMinum = document.createElement("tr");
     let airDiminum = document.createElement("td");
     airDiminum.innerHTML = angka;
+
+    let newDate = new Date();
+    let jamInput = document.createElement("td");
+    jamInput.innerHTML = `${newDate.getHours()}:${newDate.getMinutes()}`;
 
     let newButton = document.createElement("button");
     newButton.innerHTML = "Delete";
@@ -97,7 +108,7 @@ function tambah(angka){
     let tdButton = document.createElement("td");
     tdButton.append(newButton);
 
-    newRowMinum.append(airDiminum, tdButton);
+    newRowMinum.append(airDiminum, jamInput, tdButton);
 
     historyTable.append(newRowMinum);
 }
@@ -112,4 +123,34 @@ function tambahMinum500() {
 
 function tambahMinum1000() {
     tambah(1000)
+}
+
+function tambahMinumManual() {
+  let value = Math.abs(Number(document.getElementById("inputManual").value)); 
+  
+  tambah(value)
+}
+
+function showGantiTarget() {
+  var gntiTrgtDiv = document.getElementById("iptGantiTrgtDiv");
+  if (gntiTrgtDiv.style.display === "none") {
+    let targetMinum = document.getElementById("targetMinum");
+    const arrTargetMinum = targetMinum.innerHTML.split(" ");
+    let inputGantiTarget = document.getElementById("iptGantiTrgt");
+    inputGantiTarget.value = Number(arrTargetMinum[0])
+    gntiTrgtDiv.style.display = "block";
+  } else {
+    gntiTrgtDiv.style.display = "none";
+  }
+}
+
+function updateTarget(){
+  let targetMinum = document.getElementById("targetMinum");
+  let inputGantiTarget = document.getElementById("iptGantiTrgt");
+  var gntiTrgtDiv = document.getElementById("iptGantiTrgtDiv");
+  if (!inputGantiTarget.value) {
+    inputGantiTarget.value = 0
+  }
+  targetMinum.innerHTML = inputGantiTarget.value.toString() + " ml"
+  gntiTrgtDiv.style.display = "none";
 }
