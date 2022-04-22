@@ -91,6 +91,10 @@ function tambah(angka){
     let airDiminum = document.createElement("td");
     airDiminum.innerHTML = angka;
 
+    let newDate = new Date();
+    let jamInput = document.createElement("td");
+    jamInput.innerHTML = `${newDate.getHours()}:${newDate.getMinutes()}`;
+
     let newButton = document.createElement("button");
     newButton.innerHTML = "Delete";
     newButton.type = "submit";
@@ -104,7 +108,7 @@ function tambah(angka){
     let tdButton = document.createElement("td");
     tdButton.append(newButton);
 
-    newRowMinum.append(airDiminum, tdButton);
+    newRowMinum.append(airDiminum, jamInput, tdButton);
 
     historyTable.append(newRowMinum);
 }
